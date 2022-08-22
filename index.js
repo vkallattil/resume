@@ -1,3 +1,14 @@
+function handleAnchorClick(element) {
+    if (element.isCollapsed) {
+        element.section.setAttribute("class", "");
+    } else {
+        element.section.setAttribute("class", "collapsed");
+    }
+
+    element.isCollapsed = !element.isCollapsed;
+}
+
+
 const summary = {
     section: document.querySelector("#summary-section"),
     anchor: document.querySelector("#summary-anchor"),
@@ -47,13 +58,3 @@ projects.anchor.addEventListener("click", () => handleAnchorClick(projects));
 details.anchor.addEventListener("click", () => handleAnchorClick(details));
 links.anchor.addEventListener("click", () => handleAnchorClick(links));
 skills.anchor.addEventListener("click", () => handleAnchorClick(skills));
-
-function handleAnchorClick(element) {
-    if (element.isCollapsed) {
-        element.section.setAttribute("class", "");
-    } else {
-        element.section.setAttribute("class", "collapsed");
-    }
-
-    element.isCollapsed = !element.isCollapsed;
-}
