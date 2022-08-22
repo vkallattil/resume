@@ -31,6 +31,8 @@ p {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 20px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .item-header-container {
@@ -58,4 +60,9 @@ p {
 
 .detail-column {
     min-width: 200px;
+}
+
+.collapsed {
+    max-height: 0px;
+    overflow-y: hidden;
 }
